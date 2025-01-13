@@ -175,6 +175,7 @@ html{
     cursor: pointer;
     transition: 0.4s;
     border: 0;
+    font-size: 20px;
 }
 
 .orcamento:hover{
