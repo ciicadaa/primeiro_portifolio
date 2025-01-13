@@ -1,0 +1,240 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body{
+    font-family: 'roboto', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+/*Inicio do Header*/
+.menu{
+    background-color: rgb(22, 22, 22);
+    height: 80px; /* Height = Altura*/
+    width: 100%; /* Width = Largura*/
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    z-index: 9; /* Serve para sobrepor o elemento acima dos outros */
+}
+
+.menu-list{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-right: 30px;
+}
+
+.menu-list a{
+    text-decoration: none;
+    padding: 30px;
+    color:rgb(255, 255, 255);
+}
+
+.menu-list a:hover{
+    transition: 0.5s;
+    color: rgb(61, 145, 241);
+}
+/*Fim do Header*/
+
+
+/*Inicio do Main*/
+.main{
+    width: 100%; /* O 'vh' é de View Port, ou seja, toda tela*/    
+    height: calc(100vh - 80px); /* Esse 80px é da altura do Header*/    
+    background-image: url("../img/programador.png");
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.main h1{
+    color: white;
+    font-size: 60px;
+}
+
+.main p{
+    font-size: 25px;
+    font-style: italic;
+    color: rgb(61, 145, 241);
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.main a{
+    text-decoration: none;
+}
+
+.botao{
+    cursor: pointer;
+    background-color: white;
+    color: rgb(3, 54, 150);
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.8s;
+
+}
+
+.botao:hover{
+    transform: scale(1.1); /* Escala de 110% */
+}
+/*Fim do Main*/
+
+
+/*Inicio do About*/
+.about{
+    background-color: white;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about div{
+    max-width: 50%;
+    padding-right: 38px;
+}
+
+.about img{
+    max-width: 420px;
+    border-radius: 6px;
+}
+
+.about h2{
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+/*Fim About*/
+
+
+/*Inicio Projects*/
+.projects{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+}
+
+.projects h2{
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.projects p{
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.project-list{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-list img{
+    width: 22%;
+    border-radius: 4px;
+    margin-left: 1.0%;
+    margin-right: 1.0%;
+    margin-bottom: 1.5%;
+    opacity: 0.7;
+    transition: 0.9s;
+}
+.project-list img:hover{
+    opacity: 1;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.orcamento{
+    background-color: rgb(32, 32, 32);
+    color: white;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.4s;
+    border: 0;
+}
+
+.orcamento:hover{
+    transform: scale(1.1);
+}
+/*Fim Projects*/
+
+
+/*Inicio Footer*/
+footer{
+    background-color: rgb(22, 22, 22);
+    color: white;
+    width: 100%;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+footer p{
+    margin-left: 15px;
+}
+/*Fim do footer*/
+
+@media (max-width: 1000px){
+    .main h1{
+        font-size: 40px;
+    }
+
+    .main p{
+        font-size: 18px;
+    }
+
+    .main{
+        background-size: cover;
+    }
+
+    .about{
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+    }
+
+    .about img{
+        max-width: 320px;
+        margin-top: 50px;
+    }
+
+    .projects img{
+        width: 30%;
+        margin-bottom: 10px;
+    }
+
+    .orcamento{
+        margin-top: 20px;
+    }
+}
